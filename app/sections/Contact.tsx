@@ -82,6 +82,27 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="mt-24 pt-8 border-t border-border">
+          <div className="flex items-center justify-center gap-6 mb-4">
+            <span className="text-[10px] tracking-[0.2em] uppercase text-text-dim">
+              Previous Versions
+            </span>
+            <a
+              href="https://v1.piyushpaul.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] tracking-[0.2em] uppercase text-text-dim hover:text-gold transition-colors duration-500"
+            >
+              2022 — v1
+            </a>
+            <a
+              href="https://v2.piyushpaul.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] tracking-[0.2em] uppercase text-text-dim hover:text-gold transition-colors duration-500"
+            >
+              2025 — v2
+            </a>
+          </div>
           <p className="text-[11px] tracking-[0.2em] uppercase text-text-dim">
             &copy; {new Date().getFullYear()} Piyush Paul. All rights reserved.
           </p>

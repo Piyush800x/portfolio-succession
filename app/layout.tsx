@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import GrainOverlay from "./components/GrainOverlay";
 import JsonLd from "./components/JsonLd";
+import { Analytics } from '@vercel/analytics/next';
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -101,7 +102,10 @@ export default function RootLayout({
         <Navbar />
 
         {/* Main content */}
-        <main className="relative z-10">{children}</main>
+        <main className="relative z-10">{children}
+          <Analytics />
+
+        </main>
       </body>
     </html>
   );
