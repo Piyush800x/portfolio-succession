@@ -1,6 +1,7 @@
 "use client";
 
 import SectionWrapper from "@/app/components/SectionWrapper";
+import ResumeDownloadButton from "@/app/components/ResumeDownloadButton";
 import { socialLinks } from "@/app/lib/data";
 
 export default function Contact() {
@@ -56,28 +57,7 @@ export default function Contact() {
 
         {/* Resume download button */}
         <div className="mt-14">
-          <a
-            href="/RESUME_PIYUSH_PAUL.pdf"
-            download
-            className="inline-flex items-center gap-3 text-[11px] tracking-[0.25em] uppercase font-medium border border-gold text-gold hover:bg-gold hover:text-white rounded-sm px-8 py-3.5 transition-all duration-500"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Download Resume
-          </a>
+          <ResumeDownloadButton />
         </div>
 
         {/* Footer */}

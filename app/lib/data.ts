@@ -97,7 +97,7 @@ export const projects: Project[] = [
     category: "Web Application",
     year: "2025",
     role: "Frontend Developer",
-    stack: ["JavaScript", "HTML", "CSS", "Modern UI"],
+    stack: ["Next.js", "Tailwindcss", "Modern UI", "TypeScript"],
     liveUrl: "https://timezone.piyushpaul.com",
     challenge:
       "Coordinating across time zones remains a persistent pain point for distributed teams and remote workers. Existing converters lacked visual clarity, real-time updates, and the design sensibility expected of modern web tools.",
