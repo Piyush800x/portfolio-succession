@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import GrainOverlay from "./components/GrainOverlay";
 import JsonLd from "./components/JsonLd";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -104,7 +105,7 @@ export default function RootLayout({
         {/* Main content */}
         <main className="relative z-10">{children}
           <Analytics />
-
+          <SpeedInsights />
         </main>
       </body>
     </html>
