@@ -1,0 +1,138 @@
+# Piyush Paul — Full-Stack Developer & Engineer
+
+> Full-Stack Developer and Backend Engineer specializing in Python, Next.js, Flask, React, and cloud-native architectures. Building scalable systems, security tools, and modern web applications.
+
+## Contact & Links
+
+- Website: https://piyushpaul.com
+- GitHub: https://github.com/Piyush800x
+- LinkedIn: https://linkedin.com/in/piyushpaul/
+- Medium: https://medium.com/@piyush_paul
+- Email: contact@piyushpaul.com
+
+---
+
+## Projects
+
+### AstroRoni
+
+- URL: https://astroroni.com
+- Category: Full-Stack Platform
+- Year: 2025
+- Role: Full-Stack Developer
+- Stack: Next.js, Python, Flask, MongoDB, NASA Ephemeris
+
+Full-stack Vedic astrology platform with NASA ephemeris-based Kundli generation, 36 Guna matching, numerology, and NRI-friendly consultation booking.
+
+**Challenge:** Vedic astrology requires accurate planetary position calculations rooted in complex astronomical data. Existing platforms were outdated, inaccurate, or lacked the modern UX needed to make astrology services accessible — especially for NRI users across global time zones.
+
+**Approach:** Built a comprehensive platform with a computation engine powered by NASA ephemeris data for precise planetary calculations. Developed modules for Kundli generation, 36 Guna matching for marriage compatibility, Panchang (daily tithi, nakshatra, yoga), horoscope predictions, numerology grid analysis, and a numerology calculator. Integrated NRI-friendly consultation booking with global timezone support.
+
+**Outcome:** Launched a production platform at astroroni.com offering six free report types — Kundli, Kundli Matching, Panchang, Horoscope, Numerology Grid, and Numerology Calculator — alongside premium consultation services. Trusted by thousands of users with scientifically accurate Vedic calculations.
+
+---
+
+### RiskRadar
+
+- URL: https://riskradar.piyushpaul.com
+- GitHub: https://github.com/Piyush800x/risk-radar-web
+- Category: Security Tool
+- Year: 2024
+- Role: Full-Stack Developer
+- Stack: Next.js, TypeScript, Flask, Python, MongoDB
+
+Sophisticated vulnerability detection and alerting software that tracks CVEs and notifies users when their products are affected.
+
+**Challenge:** Development teams need real-time awareness of Common Vulnerabilities and Exposures (CVEs) affecting their tech stack. Manually tracking security advisories across fragmented sources is impractical, error-prone, and leaves critical windows of exposure.
+
+**Approach:** Engineered a product vulnerability assessment platform with a Next.js/TypeScript frontend and Flask API backend. Built CVE database ingestion pipelines, product-to-vulnerability mapping logic, and automated email notification dispatching when critical vulnerabilities are detected in registered products.
+
+**Outcome:** Deployed a fully functional vulnerability scanner at riskradar.piyushpaul.com. Automated CVE tracking and alerting pipeline that keeps development teams informed in real-time, significantly reducing manual monitoring effort and improving incident response time.
+
+---
+
+### Online Exam Panel
+
+- URL: https://exam-panel.piyushpaul.com
+- GitHub: https://github.com/Piyush800x/online-exam-panel
+- Category: Education Platform
+- Year: 2024
+- Role: Full-Stack Developer
+- Stack: Next.js, TypeScript, MongoDB, REST API
+
+Fully automated examination platform with comprehensive admin controls, flexible exam creation, and instant result delivery.
+
+**Challenge:** Educational institutions needed a flexible, fully automated online examination platform that handles the entire lifecycle — from exam creation and student management to automated grading and instant result generation.
+
+**Approach:** Built a complete examination system in TypeScript with a robust Admin UI for exam configuration, question bank management, and scheduling. Developed the student-facing interface with real-time timer, auto-submission, and instant result delivery. Designed for flexibility to support multiple exam formats and question types.
+
+**Outcome:** Delivered a production-ready exam platform at exam-panel.piyushpaul.com with full admin controls, automated grading, and instant result publishing. Eliminates manual evaluation overhead entirely.
+
+---
+
+### TimeZonesNow
+
+- URL: https://timezone.piyushpaul.com
+- Category: Web Application
+- Year: 2025
+- Role: Frontend Developer
+- Stack: Next.js, Tailwindcss, Modern UI, TypeScript
+
+World clock and time zone converter with modern UI — 2nd Place winner at Code Circuit Frontend Hackathon.
+
+**Challenge:** Coordinating across time zones remains a persistent pain point for distributed teams and remote workers. Existing converters lacked visual clarity, real-time updates, and the design sensibility expected of modern web tools.
+
+**Approach:** Designed and built a clean, modern world clock and time zone converter with emphasis on intuitive UX — real-time clock displays, instant zone conversion, and a responsive layout that works across all devices. Focused on visual polish and immediate usability.
+
+**Outcome:** Secured 2nd Place at the Code Circuit Frontend Hackathon. Deployed at timezone.piyushpaul.com as a production-quality tool serving instant time zone conversions with a polished, modern interface.
+
+---
+
+## Professional Experience
+
+### Freelance Backend Developer — Fluencer Market
+
+- Period: Dec 2024 — Apr 2025
+- Description: Developed and maintained RESTful APIs to support influencer-brand collaborations using Flask.
+- Designed scalable backend services for managing influencer data and brand profiles
+- Built campaign workflow automation and performance analytics pipelines
+- Delivered production-grade APIs supporting real-time collaboration features
+
+---
+
+## Education
+
+### B.Tech in Computer Science and Engineering
+- Institution: JIS College of Engineering, West Bengal, India
+- Period: 2025 — 2028
+
+---
+
+## Technical Skills
+
+### Backend
+Python, Node.js, Java, C++, Rust
+
+### Frontend
+JavaScript, React, Next.js, HTML, CSS, Tailwind CSS
+
+### Frameworks
+Flask, Django, Spring Boot
+
+### Database & Cloud
+MongoDB, PostgreSQL, MySQL, SQLite, GCP, AWS
+
+### Tools & DevOps
+Git, Docker, Linux, Redis, Shell Scripting, Postman
+
+---
+
+## Research & Writing
+
+- **Building Vedic Astrology Engines with NASA Ephemeris Data** (2025.02, Engineering): Technical deep-dive into implementing astronomical calculation engines for AstroRoni — from planetary position algorithms using NASA ephemeris to Kundli chart rendering and 36 Guna matching logic.
+
+- **Architecture of a Real-Time CVE Tracking System** (2024.11, Security): Architectural decisions behind building RiskRadar — CVE database ingestion pipelines, product-to-vulnerability mapping, and automated email notification dispatching at scale.
+
+- **Browser Automation at Scale with Python and Selenium** (2024.08, Automation): Practical patterns for browser automation including session management, anti-detection techniques, and scheduled task orchestration for reward collection systems.
+
+- **Designing Scalable REST APIs with Flask** (2024.05, Backend): Best practices for Flask API architecture — blueprint structuring, authentication middleware, database connection pooling, and patterns learned building APIs for Fluencer Market.

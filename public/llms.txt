@@ -1,0 +1,42 @@
+# Piyush Paul
+
+> Full-Stack Developer & Backend Engineer
+
+## About
+
+Piyush Paul is a Full-Stack Developer and Backend Engineer specializing in Python, Next.js, Flask, React, and cloud-native architectures. Building scalable systems, security tools, and modern web applications.
+
+## Links
+
+- Portfolio: https://piyushpaul.com
+- GitHub: https://github.com/Piyush800x
+- LinkedIn: https://linkedin.com/in/piyushpaul/
+- Medium: https://medium.com/@piyush_paul
+- Email: contact@piyushpaul.com
+
+## Projects
+
+- [AstroRoni](https://astroroni.com): Full-stack Vedic astrology platform with NASA ephemeris-based Kundli generation, 36 Guna matching, numerology, and NRI-friendly consultation booking.
+- [RiskRadar](https://riskradar.piyushpaul.com): Vulnerability detection and alerting software that tracks CVEs and notifies users when their products are affected.
+- [Online Exam Panel](https://exam-panel.piyushpaul.com): Fully automated examination platform with admin controls, flexible exam creation, and instant result delivery.
+- [TimeZonesNow](https://timezone.piyushpaul.com): World clock and time zone converter — 2nd Place winner at Code Circuit Frontend Hackathon.
+
+## Skills
+
+- Backend: Python, Node.js, Java, C++, Rust
+- Frontend: JavaScript, React, Next.js, HTML, CSS, Tailwind CSS
+- Frameworks: Flask, Django, Spring Boot
+- Database & Cloud: MongoDB, PostgreSQL, MySQL, SQLite, GCP, AWS
+- Tools & DevOps: Git, Docker, Linux, Redis, Shell Scripting, Postman
+
+## Experience
+
+- Freelance Backend Developer at Fluencer Market (Dec 2024 — Apr 2025)
+
+## Education
+
+- B.Tech in Computer Science and Engineering, JIS College of Engineering (2025 — 2028)
+
+## Optional
+
+- [Full details](https://piyushpaul.com/llms-full.txt)
