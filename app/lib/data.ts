@@ -74,21 +74,20 @@ export const projects: Project[] = [
       "Deployed a fully functional vulnerability scanner at riskradar.piyushpaul.com. Automated CVE tracking and alerting pipeline that keeps development teams informed in real-time, significantly reducing manual monitoring effort and improving incident response time.",
   },
   {
-    slug: "online-exam-panel",
-    title: "Online Exam Panel",
-    tagline: "Fully automated examination platform with comprehensive admin controls, flexible exam creation, and instant result delivery.",
-    category: "Education Platform",
-    year: "2024",
+    slug: "http-header-security-analyzer",
+    title: "HTTP Header Security Analyzer API",
+    tagline: "Production-ready Flask REST API that audits website HTTP security headers, scores sites out of 100 with A–F grading, and returns severity-ranked remediation recommendations.",
+    category: "Full-Stack API / Security Tool",
+    year: "2026",
     role: "Full-Stack Developer",
-    stack: ["Next.js", "TypeScript", "MongoDB", "REST API"],
-    liveUrl: "https://exam-panel.piyushpaul.com",
-    githubUrl: "https://github.com/Piyush800x/online-exam-panel",
+    stack: ["Python", "Flask", "Gunicorn", "Docker", "requests", "pytest"],
+    githubUrl: "https://github.com/Piyush800x/header-analyzer",
     challenge:
-      "Educational institutions needed a flexible, fully automated online examination platform that handles the entire lifecycle — from exam creation and student management to automated grading and instant result generation.",
+      "Most developers overlook HTTP security headers during deployment, leaving sites vulnerable to XSS, clickjacking, MIME sniffing, and transport-layer attacks. Existing tools were either too manual, lacked actionable guidance, or weren't suitable for programmatic integration into CI/CD pipelines.",
     approach:
-      "Built a complete examination system in TypeScript with a robust Admin UI for exam configuration, question bank management, and scheduling. Developed the student-facing interface with real-time timer, auto-submission, and instant result delivery. Designed for flexibility to support multiple exam formats and question types.",
+      "Built a REST API with Flask Blueprints that fetches and audits 8 OWASP-recommended security headers — including CSP, HSTS, and X-Frame-Options — assigning severity levels (HIGH / MEDIUM / LOW) and point-based scores to each. Implemented built-in rate limiting (30 req/min per IP) without external dependencies, CORS support for frontend integration, structured JSON error handling, and a health check endpoint. Deployed with Gunicorn and Docker for production readiness, with 12 unit tests covering core analysis logic.",
     outcome:
-      "Delivered a production-ready exam platform at exam-panel.piyushpaul.com with full admin controls, automated grading, and instant result publishing. Eliminates manual evaluation overhead entirely.",
+      "Delivered a fully containerized, production-grade security auditing API with two scan modes (POST JSON body and GET query param), a 0–100 scoring system with A–F grading, and per-header remediation recommendations linked to MDN documentation. Demonstrates REST API design, OWASP security knowledge, and clean separation of concerns via Flask Blueprints.",
   },
   {
     slug: "timezone-converter",
@@ -105,6 +104,23 @@ export const projects: Project[] = [
       "Designed and built a clean, modern world clock and time zone converter with emphasis on intuitive UX — real-time clock displays, instant zone conversion, and a responsive layout that works across all devices. Focused on visual polish and immediate usability.",
     outcome:
       "Secured 2nd Place at the Code Circuit Frontend Hackathon. Deployed at timezone.piyushpaul.com as a production-quality tool serving instant time zone conversions with a polished, modern interface.",
+  },
+  {
+    slug: "online-exam-panel",
+    title: "Online Exam Panel",
+    tagline: "Fully automated examination platform with comprehensive admin controls, flexible exam creation, and instant result delivery.",
+    category: "Education Platform",
+    year: "2024",
+    role: "Full-Stack Developer",
+    stack: ["Next.js", "TypeScript", "MongoDB", "REST API"],
+    liveUrl: "https://exam-panel.piyushpaul.com",
+    githubUrl: "https://github.com/Piyush800x/online-exam-panel",
+    challenge:
+      "Educational institutions needed a flexible, fully automated online examination platform that handles the entire lifecycle — from exam creation and student management to automated grading and instant result generation.",
+    approach:
+      "Built a complete examination system in TypeScript with a robust Admin UI for exam configuration, question bank management, and scheduling. Developed the student-facing interface with real-time timer, auto-submission, and instant result delivery. Designed for flexibility to support multiple exam formats and question types.",
+    outcome:
+      "Delivered a production-ready exam platform at exam-panel.piyushpaul.com with full admin controls, automated grading, and instant result publishing. Eliminates manual evaluation overhead entirely.",
   },
 ];
 
