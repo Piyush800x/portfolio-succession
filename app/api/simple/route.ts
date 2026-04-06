@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
     const resumePath = path.join(
       process.cwd(),
       "private",
-      "PIYUSH_PAUL_SIMPLE_RESUME.pdf"
+      "RESUME_PIYUSH_PAUL.pdf"
     );
     const fileBuffer = await readFile(resumePath);
 
@@ -49,11 +49,12 @@ export async function POST(request: NextRequest) {
       headers: {
         "Content-Type": "application/pdf",
         "Content-Disposition":
-          'attachment; filename="PIYUSH_PAUL_SIMPLE_RESUME.pdf"',
+          'attachment; filename="RESUME_PIYUSH_PAUL.pdf"',
         "Cache-Control": "no-store",
       },
     });
-  } catch {
+  } catch (error) {
+    console.error("Error reading simple resume:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
