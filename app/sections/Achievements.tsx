@@ -164,6 +164,21 @@ export default function Achievements() {
                   </span>
                 ))}
               </div>
+              <div className="mt-8">
+                <a
+                  href="https://devfolio.co/projects/neighbournet-3d1f"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-[10px] md:text-[11px] tracking-[0.2em] uppercase font-medium text-text bg-bg border border-border hover:border-border-gold transition-all duration-500 rounded-sm group hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(180,147,80,0.08)]"
+                >
+                  <span>View Project on Devfolio</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gold-muted group-hover:text-gold transition-colors duration-500">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
             </div>
 
             {/* Journey Timeline */}
