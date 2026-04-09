@@ -163,7 +163,7 @@ export const education: EducationEntry[] = [
 export const skills = [
   { category: "Backend", items: ["Python", "Node.js", "Java", "C++", "Rust"] },
   { category: "Frontend", items: ["JavaScript", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"] },
-  { category: "Frameworks", items: ["Flask", "Django", "Spring Boot"] },
+  { category: "Frameworks", items: ["Flask", "Django", "Spring Boot", "FastAPI"] },
   { category: "Database & Cloud", items: ["MongoDB", "PostgreSQL", "MySQL", "SQLite", "GCP", "AWS"] },
   { category: "Tools & DevOps", items: ["Git", "Docker", "Linux", "Redis", "Shell Scripting", "Postman"] },
 ];
