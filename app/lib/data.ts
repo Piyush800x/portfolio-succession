@@ -128,6 +128,22 @@ export const hackathonProjects: Project[] = [
       "Achieved 1st Runners Up at HackTropica 2K26 (MLH). Delivered a functional prototype including a React Native mobile app for victims/relays, a FastAPI backend with Gemini 2.5 Flash for cloud-side triage, and a real-time Next.js dashboard for disaster response coordinators.",
   },
   {
+    slug: "arta",
+    title: "ARTA — Autonomous Red Team Agent",
+    tagline: "Autonomous penetration testing pipeline powered by Gemini 2.0 Flash — MLH 8-hour sprint hackathon.",
+    category: "Cybersecurity / AI Agent",
+    year: "2026",
+    role: "Full-Stack Developer",
+    stack: ["Python", "FastAPI", "Next.js", "Gemini 2.0 Flash", "Nmap"],
+    githubUrl: "https://github.com/Piyush800x/arta",
+    challenge:
+      "Manual penetration testing is slow and resource-intensive. Security teams need a way to automate the reconnaissance, vulnerability scanning, and reporting phases to identify critical security gaps in minutes, not days.",
+    approach:
+      "Built a multi-agent orchestration system using Gemini 2.0 Flash to handle the entire offensive pipeline. Developed specialized agents for Recon (Nmap parsing), Vulnerability Analysis (live NVD API integration), and Automated Reporting. Implemented a real-time SSE dashboard in Next.js to monitor the agent's reasoning and tool usage as it scans Metasploitable targets.",
+    outcome:
+      "Successfully demonstrated an autonomous end-to-end security pipeline during an MLH 8-hour sprint. Delivered a tool that produces severity-ranked findings and professional remediation reports with zero manual intervention.",
+  },
+  {
     slug: "timezone-converter",
     title: "TimeZonesNow",
     tagline: "World clock and time zone converter with modern UI — 2nd Place winner at Code Circuit Frontend Hackathon.",
