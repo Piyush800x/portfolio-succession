@@ -3,13 +3,15 @@
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { projects } from "@/app/lib/data";
+import { projects, hackathonProjects } from "@/app/lib/data";
 import { notFound } from "next/navigation";
+
+const allProjects = [...projects, ...hackathonProjects];
 
 export default function ProjectContent() {
   const params = useParams();
   const slug = params.slug as string;
-  const project = projects.find((p) => p.slug === slug);
+  const project = allProjects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -89,6 +91,14 @@ export default function ProjectContent() {
               Role
             </div>
             <div className="text-sm text-text">{project.role}</div>
+            {project.team && (
+              <div className="mt-4">
+                <div className="text-[10px] tracking-[0.25em] uppercase text-text-dim mb-2 font-medium">
+                  Team
+                </div>
+                <div className="text-sm text-gold">{project.team}</div>
+              </div>
+            )}
           </div>
           <div>
             <div className="text-[10px] tracking-[0.25em] uppercase text-text-dim mb-2 font-medium">

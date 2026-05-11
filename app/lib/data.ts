@@ -8,6 +8,7 @@ export interface Project {
   year: string;
   role: string;
   stack: string[];
+  team?: string;
   liveUrl?: string;
   githubUrl?: string;
   challenge: string;
@@ -90,22 +91,6 @@ export const projects: Project[] = [
       "Delivered a fully containerized, production-grade security auditing API with two scan modes (POST JSON body and GET query param), a 0–100 scoring system with A–F grading, and per-header remediation recommendations linked to MDN documentation. Demonstrates REST API design, OWASP security knowledge, and clean separation of concerns via Flask Blueprints.",
   },
   {
-    slug: "timezone-converter",
-    title: "TimeZonesNow",
-    tagline: "World clock and time zone converter with modern UI — 2nd Place winner at Code Circuit Frontend Hackathon.",
-    category: "Web Application",
-    year: "2025",
-    role: "Frontend Developer",
-    stack: ["Next.js", "Tailwindcss", "Modern UI", "TypeScript"],
-    liveUrl: "https://timezone.piyushpaul.com",
-    challenge:
-      "Coordinating across time zones remains a persistent pain point for distributed teams and remote workers. Existing converters lacked visual clarity, real-time updates, and the design sensibility expected of modern web tools.",
-    approach:
-      "Designed and built a clean, modern world clock and time zone converter with emphasis on intuitive UX — real-time clock displays, instant zone conversion, and a responsive layout that works across all devices. Focused on visual polish and immediate usability.",
-    outcome:
-      "Secured 2nd Place at the Code Circuit Frontend Hackathon. Deployed at timezone.piyushpaul.com as a production-quality tool serving instant time zone conversions with a polished, modern interface.",
-  },
-  {
     slug: "online-exam-panel",
     title: "Online Exam Panel",
     tagline: "Fully automated examination platform with comprehensive admin controls, flexible exam creation, and instant result delivery.",
@@ -121,6 +106,42 @@ export const projects: Project[] = [
       "Built a complete examination system in TypeScript with a robust Admin UI for exam configuration, question bank management, and scheduling. Developed the student-facing interface with real-time timer, auto-submission, and instant result delivery. Designed for flexibility to support multiple exam formats and question types.",
     outcome:
       "Delivered a production-ready exam platform at exam-panel.piyushpaul.com with full admin controls, automated grading, and instant result publishing. Eliminates manual evaluation overhead entirely.",
+  },
+];
+
+export const hackathonProjects: Project[] = [
+  {
+    slug: "neighbournet",
+    title: "NeighbourNet",
+    tagline: "Offline mesh SOS communication system with on-device AI triage for disaster scenarios where cellular infrastructure fails.",
+    category: "Mesh Network / Security",
+    year: "2026",
+    role: "Full-Stack Developer",
+    team: "Team Aloo Siddo",
+    stack: ["React Native", "FastAPI", "Supabase", "Gemini 2.5 Flash", "Bluetooth"],
+    githubUrl: "https://github.com/sudipta57/NeighbourNet2",
+    challenge:
+      "Traditional communication infrastructure (cellular, internet) is the first thing to fail during natural disasters like floods or cyclones. This leaves victims unable to send SOS messages and rescue teams unable to coordinate or triage needs in real-time.",
+    approach:
+      "Developed an offline-first mesh networking system that turns Android devices into relay nodes using BLE and WiFi Direct. SOS messages hop phone-to-phone without internet, are triaged on-device using a multilingual keyword-scoring engine, and automatically sync to a cloud-based coordinator dashboard when any device in the mesh gains connectivity.",
+    outcome:
+      "Achieved 1st Runners Up at HackTropica 2K26 (MLH). Delivered a functional prototype including a React Native mobile app for victims/relays, a FastAPI backend with Gemini 2.5 Flash for cloud-side triage, and a real-time Next.js dashboard for disaster response coordinators.",
+  },
+  {
+    slug: "timezone-converter",
+    title: "TimeZonesNow",
+    tagline: "World clock and time zone converter with modern UI — 2nd Place winner at Code Circuit Frontend Hackathon.",
+    category: "Web Application",
+    year: "2025",
+    role: "Frontend Developer",
+    stack: ["Next.js", "Tailwindcss", "Modern UI", "TypeScript"],
+    liveUrl: "https://timezone.piyushpaul.com",
+    challenge:
+      "Coordinating across time zones remains a persistent pain point for distributed teams and remote workers. Existing converters lacked visual clarity, real-time updates, and the design sensibility expected of modern web tools.",
+    approach:
+      "Designed and built a clean, modern world clock and time zone converter with emphasis on intuitive UX — real-time clock displays, instant zone conversion, and a responsive layout that works across all devices. Focused on visual polish and immediate usability.",
+    outcome:
+      "Secured 2nd Place at the Code Circuit Frontend Hackathon. Deployed at timezone.piyushpaul.com as a production-quality tool serving instant time zone conversions with a polished, modern interface.",
   },
 ];
 

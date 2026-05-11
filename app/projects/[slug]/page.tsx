@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { projects } from "@/app/lib/data";
+import { projects, hackathonProjects } from "@/app/lib/data";
 import ProjectContent from "./ProjectContent";
+
+const allProjects = [...projects, ...hackathonProjects];
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -8,7 +10,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = allProjects.find((p) => p.slug === slug);
 
   if (!project) {
     return {
@@ -37,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export function generateStaticParams() {
-  return projects.map((project) => ({
+  return allProjects.map((project) => ({
     slug: project.slug,
   }));
 }
