@@ -111,6 +111,23 @@ export const projects: Project[] = [
 
 export const hackathonProjects: Project[] = [
   {
+    slug: "packetforge",
+    title: "PacketForge",
+    tagline: "DPDK-based network packet scrubber that detects and drops DDoS traffic at line rate, protecting backend servers at the kernel-bypass level — 1st Runners Up at Synchronicity S2.",
+    category: "Network Security / Systems",
+    year: "2025",
+    role: "Systems Developer",
+    team: "Team Aloo Siddo",
+    stack: ["C", "DPDK", "QEMU/KVM", "FastAPI", "Python", "Lua", "WebSocket"],
+    githubUrl: "https://github.com/samiranpal2004/PacketForge-main",
+    challenge:
+      "DDoS attacks overwhelm servers by exhausting CPU and bandwidth at the kernel level. Traditional software firewalls are too slow — they hand packets to the OS kernel which processes them one by one, making mitigation reactive and CPU-intensive. A real scrubber must operate below the kernel, at the NIC hardware level.",
+    approach:
+      "Built PacketForge as a dual-NIC DPDK scrubber running inside QEMU/KVM VMs. Packets arrive at the ingress DPDK port (bypassing the kernel entirely), get classified by a Lua rule engine, and are either dropped or forwarded to the egress port at 200K–470K pps. Added a FastAPI telemetry server with real-time WebSocket streaming to a live dashboard, and a Python CLI supporting zero-downtime CIDR block/unblock with sub-millisecond rule application. Lua rules hot-reload atomically with no packet loss gap.",
+    outcome:
+      "Achieved 1st Runners Up at Synchronicity S2 (JU ACM Student Chapter, Jadavpur University). Demonstrated a live DDoS flood scenario — SYN, UDP, and ICMP floods hitting 470K pps — with instant 100% drop rate upon a single CLI command, while the protected API server remained completely unresponsive to the attack.",
+  },
+  {
     slug: "neighbournet",
     title: "NeighbourNet",
     tagline: "Offline mesh SOS communication system with on-device AI triage for disaster scenarios where cellular infrastructure fails.",

@@ -39,6 +39,33 @@ const achievements = [
     imageCount: 9,
   },
   {
+    id: "synchronicity-s2",
+    event: "Synchronicity S2",
+    location: "Jadavpur University Salt Lake Campus, Kolkata",
+    team: "Team Aloo Siddo",
+    date: "2025",
+    logo: "/s2/s2_logo.png",
+    mlhLogo: "/s2/ju.png",
+    prize: "₹5,000",
+    rank: "1st Runners Up",
+    projectName: "PacketForge",
+    projectIcon: "🛡️",
+    projectDescription: "A high-performance DPDK-based network packet scrubber that detects and drops DDoS attack traffic at line rate — protecting backend servers at the kernel-bypass level. Built with a real-time telemetry dashboard, a CLI for live rule management, and Lua-based hot-reloadable filtering rules.",
+    projectTags: ["DPDK", "Network Security", "C", "DDoS Mitigation", "QEMU/KVM", "Lua"],
+    githubUrl: "https://github.com/samiranpal2004/PacketForge-main",
+    journey: [
+      { icon: "🌐", title: "The Hackathon", description: "Synchronicity S2 — a 24-hour onsite hackathon organized by the JU ACM Student Chapter at Jadavpur University Salt Lake Campus, one of eastern India's largest student-led hackathons." },
+      { icon: "🔥", title: "The Idea", description: "Decided to tackle real-world network infrastructure security — building a DDoS scrubber that operates at the DPDK kernel-bypass layer, invisible to the OS and processing 200K–470K packets per second." },
+      { icon: "⚙️", title: "The Build", description: "Implemented PacketForge with dual-NIC DPDK pipeline for ingress/egress scrubbing, a FastAPI telemetry server, real-time WebSocket dashboard, and a Python CLI for zero-downtime CIDR block/unblock operations." },
+      { icon: "🧪", title: "The Demo", description: "Ran live SYN/UDP/ICMP flood attacks inside QEMU/KVM VMs and demonstrated instant 100% drop rate, proving the protected server was completely unaware of the ongoing attack." },
+      { icon: "🏆", title: "The Result", description: "Secured 1st Runners Up at Synchronicity S2 — judges recognized the technical depth of kernel-bypass networking in a hackathon context." },
+    ],
+    teamMembers: ["Samiran Pal", "Piyush Paul", "Sudipta Ghorami"],
+    takeaways: ["DPDK kernel-bypass delivers true line-rate packet processing", "Live demo beats slides — showing 100% drop rate in real time was decisive", "Infrastructure security is deeply compelling even at hackathon scale", "Strong team chemistry and focused scope wins over scope creep"],
+    imagePath: "/s2/s2_",
+    imageCount: 2,
+  },
+  {
     id: "bot-to-agent",
     event: "MLH 8-Hour Sprint",
     location: "IEM Ashram Building",
@@ -68,14 +95,108 @@ const achievements = [
 ];
 
 export default function Achievements() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const total = achievements.length;
+
+  const goTo = useCallback(
+    (index: number) => {
+      setDirection(index > activeIndex ? 1 : -1);
+      setActiveIndex(index);
+    },
+    [activeIndex]
+  );
+
+  const goPrev = useCallback(() => {
+    const newIndex = (activeIndex - 1 + total) % total;
+    setDirection(-1);
+    setActiveIndex(newIndex);
+  }, [activeIndex, total]);
+
+  const goNext = useCallback(() => {
+    const newIndex = (activeIndex + 1) % total;
+    setDirection(1);
+    setActiveIndex(newIndex);
+  }, [activeIndex, total]);
+
+  const slideVariants = {
+    enter: (dir: number) => ({ x: dir > 0 ? "100%" : "-100%", opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (dir: number) => ({ x: dir > 0 ? "-100%" : "100%", opacity: 0 }),
+  };
+
   return (
     <SectionWrapper id="achievements">
       <SectionHeading title="Achievements" subtitle="Milestones" />
 
-      <div className="space-y-16 lg:space-y-24">
-        {achievements.map((achievement) => (
-          <AchievementCard key={achievement.id} achievement={achievement} />
-        ))}
+      {/* Top controls bar — prev | dots+counter | next */}
+      {total > 1 && (
+        <div className="flex items-center justify-between mb-6">
+          {/* Prev button — extreme left */}
+          <button
+            onClick={goPrev}
+            className="w-9 h-9 rounded-full bg-bg-elevated border border-border text-text-muted hover:text-gold hover:border-border-gold transition-all duration-300 flex items-center justify-center hover:shadow-[0_0_12px_rgba(180,147,80,0.15)] active:scale-95"
+            aria-label="Previous achievement"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+
+          {/* Center — dots stacked above counter */}
+          <div className="flex flex-col items-center gap-2">
+            {/* Dot indicators */}
+            <div className="flex items-center gap-2">
+              {achievements.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => goTo(i)}
+                  className={`transition-all duration-300 rounded-full ${
+                    i === activeIndex
+                      ? "w-8 h-2 bg-gold"
+                      : "w-2 h-2 bg-white/20 hover:bg-white/40"
+                  }`}
+                  aria-label={`Go to achievement ${i + 1}`}
+                />
+              ))}
+            </div>
+            {/* Counter */}
+            <span className="text-[10px] tracking-[0.2em] uppercase text-text-dim">
+              {String(activeIndex + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+            </span>
+          </div>
+
+          {/* Next button — extreme right */}
+          <button
+            onClick={goNext}
+            className="w-9 h-9 rounded-full bg-bg-elevated border border-border text-text-muted hover:text-gold hover:border-border-gold transition-all duration-300 flex items-center justify-center hover:shadow-[0_0_12px_rgba(180,147,80,0.15)] active:scale-95"
+            aria-label="Next achievement"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      )}
+
+      {/* Slider wrapper */}
+      <div className="relative overflow-hidden">
+        <AnimatePresence initial={false} custom={direction} mode="popLayout">
+          <motion.div
+            key={activeIndex}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "tween", duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
+              opacity: { duration: 0.3 },
+            }}
+          >
+            <AchievementCard achievement={achievements[activeIndex]} />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </SectionWrapper>
   );
@@ -396,11 +517,10 @@ function ImageCarousel({ path, count }: { path: string; count: number }) {
           <button
             key={i}
             onClick={() => goTo(i)}
-            className={`transition-all duration-300 rounded-full ${
-              i === current
+            className={`transition-all duration-300 rounded-full ${i === current
                 ? "w-6 h-1.5 bg-white"
                 : "w-1.5 h-1.5 bg-white/40 hover:bg-white/70"
-            }`}
+              }`}
             aria-label={`Go to image ${i + 1}`}
           />
         ))}
