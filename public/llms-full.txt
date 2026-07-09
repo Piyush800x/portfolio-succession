@@ -1,6 +1,6 @@
-# Piyush Paul — Full-Stack Developer & Engineer
+# Piyush Paul — AI/ML Developer & Cybersecurity Engineer
 
-> Full-Stack Developer and Backend Engineer specializing in Python, Next.js, Flask, React, and cloud-native architectures. Building scalable systems, security tools, and modern web applications.
+> AI/ML Developer and Cybersecurity Engineer specializing in agentic AI systems, autonomous penetration testing pipelines, multi-agent orchestration, RAG, DPDK high-performance networking, and full-stack backend engineering. MLH Hack Days Winner 2026. Based in West Bengal, India.
 
 ## Contact & Links
 
@@ -9,6 +9,20 @@
 - LinkedIn: https://linkedin.com/in/piyushpaul/
 - Medium: https://medium.com/@piyush_paul
 - Email: contact@piyushpaul.com
+
+---
+
+## Professional Summary
+
+Computer Science undergraduate with hands-on experience building AI-powered SaaS platforms, cybersecurity tools, and high-performance backend systems. Proficient across the full stack — from low-level C/DPDK network programming to cloud-deployed agentic AI pipelines. Known for calm, analytical problem-solving under pressure, strong pattern-recognition instincts, and a relentless drive to ship working systems end-to-end. Particularly interested in autonomous AI agents and offensive/defensive cybersecurity.
+
+---
+
+## Achievements
+
+- 🏆 **MLH Hack Days Winner (2026)** — Built ARTA, an AI-powered autonomous multi-agent penetration-testing system using Gemini 2.0 Flash.
+- 🥈 **Synchronicity S2, Jadavpur University (2026)** — 1st Runner-Up for PacketForge, a DPDK-based DDoS scrubber sustaining 470K packets/sec.
+- 🥈 **MLH HackTropica (2026)** — 1st Runner-Up for NeighbourNet, an offline mesh networking solution for disaster communication.
 
 ---
 
@@ -51,6 +65,24 @@ Sophisticated vulnerability detection and alerting software that tracks CVEs and
 
 ---
 
+### HTTP Header Security Analyzer API
+
+- GitHub: https://github.com/Piyush800x/header-analyzer
+- Category: Full-Stack API / Security Tool
+- Year: 2026
+- Role: Full-Stack Developer
+- Stack: Python, Flask, Gunicorn, Docker, pytest
+
+Production-ready Flask REST API that audits website HTTP security headers, scores sites out of 100 with A–F grading, and returns severity-ranked remediation recommendations.
+
+**Challenge:** Most developers overlook HTTP security headers during deployment, leaving sites vulnerable to XSS, clickjacking, MIME sniffing, and transport-layer attacks.
+
+**Approach:** Built a REST API with Flask Blueprints auditing 8 OWASP-recommended security headers — CSP, HSTS, X-Frame-Options — assigning severity levels (HIGH / MEDIUM / LOW) and point-based scores. Implemented built-in rate limiting (30 req/min per IP), CORS support, structured JSON error handling, and a health check endpoint. Deployed with Gunicorn and Docker with 12 unit tests.
+
+**Outcome:** Delivered a containerized, production-grade security auditing API with a 0–100 scoring system, A–F grading, and per-header remediation recommendations linked to MDN documentation.
+
+---
+
 ### Online Exam Panel
 
 - URL: https://exam-panel.piyushpaul.com
@@ -64,7 +96,7 @@ Fully automated examination platform with comprehensive admin controls, flexible
 
 **Challenge:** Educational institutions needed a flexible, fully automated online examination platform that handles the entire lifecycle — from exam creation and student management to automated grading and instant result generation.
 
-**Approach:** Built a complete examination system in TypeScript with a robust Admin UI for exam configuration, question bank management, and scheduling. Developed the student-facing interface with real-time timer, auto-submission, and instant result delivery. Designed for flexibility to support multiple exam formats and question types.
+**Approach:** Built a complete examination system in TypeScript with a robust Admin UI for exam configuration, question bank management, and scheduling. Developed the student-facing interface with real-time timer, auto-submission, and instant result delivery.
 
 **Outcome:** Delivered a production-ready exam platform at exam-panel.piyushpaul.com with full admin controls, automated grading, and instant result publishing. Eliminates manual evaluation overhead entirely.
 
@@ -76,54 +108,120 @@ Fully automated examination platform with comprehensive admin controls, flexible
 - Category: Web Application
 - Year: 2025
 - Role: Frontend Developer
-- Stack: Next.js, Tailwindcss, Modern UI, TypeScript
+- Stack: Next.js, Tailwind CSS, TypeScript
 
 World clock and time zone converter with modern UI — 2nd Place winner at Code Circuit Frontend Hackathon.
 
-**Challenge:** Coordinating across time zones remains a persistent pain point for distributed teams and remote workers. Existing converters lacked visual clarity, real-time updates, and the design sensibility expected of modern web tools.
+**Challenge:** Coordinating across time zones remains a persistent pain point for distributed teams and remote workers.
 
-**Approach:** Designed and built a clean, modern world clock and time zone converter with emphasis on intuitive UX — real-time clock displays, instant zone conversion, and a responsive layout that works across all devices. Focused on visual polish and immediate usability.
+**Approach:** Designed and built a clean, modern world clock and time zone converter with emphasis on intuitive UX — real-time clock displays, instant zone conversion, and a responsive layout across all devices.
 
-**Outcome:** Secured 2nd Place at the Code Circuit Frontend Hackathon. Deployed at timezone.piyushpaul.com as a production-quality tool serving instant time zone conversions with a polished, modern interface.
+**Outcome:** Secured 2nd Place at the Code Circuit Frontend Hackathon. Deployed at timezone.piyushpaul.com as a production-quality tool.
+
+---
+
+## Hackathon Projects
+
+### ARTA — Autonomous Red Team Agent
+
+- GitHub: https://github.com/Piyush800x/arta
+- Category: Cybersecurity / AI Agent
+- Year: 2026
+- Award: 🏆 MLH Hack Days Winner
+- Stack: Python, FastAPI, Next.js, Gemini 2.0 Flash, Nmap, SQLite, Puppeteer, Metasploit
+
+Autonomous penetration testing pipeline powered by Gemini 2.0 Flash — multi-agent system for reconnaissance, CVE analysis, and exploit validation.
+
+**Challenge:** Manual penetration testing is slow and resource-intensive. Security teams need automation for reconnaissance, vulnerability scanning, and reporting phases to identify critical security gaps in minutes, not days.
+
+**Approach:** Built a multi-agent orchestration system using Gemini 2.0 Flash to handle the entire offensive pipeline. Specialized agents for Recon (Nmap parsing), Vulnerability Analysis (live NVD API integration), and Automated Reporting. Implemented real-time SSE dashboard in Next.js for monitoring agent reasoning and tool usage.
+
+**Outcome:** Won MLH Hack Days. Delivered a tool producing severity-ranked findings and professional remediation reports with zero manual intervention. Demonstrated against Metasploitable targets.
+
+---
+
+### PacketForge
+
+- GitHub: https://github.com/samiranpal2004/PacketForge-main
+- Category: Network Security / Systems
+- Year: 2026
+- Award: 🥈 Synchronicity S2 — 1st Runner-Up (Jadavpur University)
+- Team: Team Aloo Siddo
+- Stack: C, DPDK, QEMU/KVM, FastAPI, Python, Lua, WebSocket
+
+DPDK-based dual-NIC packet scrubber that detects and drops DDoS traffic at line rate — sustaining 470K packets/sec.
+
+**Challenge:** DDoS attacks overwhelm servers by exhausting CPU and bandwidth at the kernel level. Traditional software firewalls are too slow — they hand packets to the OS kernel which processes them one by one, making mitigation reactive and CPU-intensive.
+
+**Approach:** Built a dual-NIC DPDK scrubber running inside QEMU/KVM VMs. Packets arrive at the ingress DPDK port (bypassing the kernel entirely), get classified by a Lua rule engine, and are either dropped or forwarded at 200K–470K pps. Added a FastAPI telemetry server with real-time WebSocket streaming to a live dashboard, and a Python CLI supporting zero-downtime CIDR block/unblock with sub-millisecond rule application. Lua rules hot-reload atomically.
+
+**Outcome:** Achieved 1st Runners Up at Synchronicity S2. Demonstrated a live DDoS flood scenario — SYN, UDP, and ICMP floods hitting 470K pps — with instant 100% drop rate upon a single CLI command.
+
+---
+
+### NeighbourNet
+
+- GitHub: https://github.com/sudipta57/NeighbourNet2
+- Category: Mesh Network / Disaster Communication
+- Year: 2026
+- Award: 🥈 MLH HackTropica — 1st Runner-Up
+- Team: Team Aloo Siddo
+- Stack: React Native, FastAPI, Supabase, Gemini 2.5 Flash, Bluetooth, WiFi Direct
+
+Offline mesh SOS communication system with on-device AI triage for disaster scenarios where cellular infrastructure fails.
+
+**Challenge:** Traditional communication infrastructure (cellular, internet) is the first thing to fail during natural disasters like floods or cyclones. This leaves victims unable to send SOS messages and rescue teams unable to coordinate or triage needs in real-time.
+
+**Approach:** Developed an offline-first mesh networking system that turns Android devices into relay nodes using BLE and WiFi Direct. SOS messages hop phone-to-phone without internet, are triaged on-device using a multilingual keyword-scoring engine, and automatically sync to a cloud-based coordinator dashboard when any device in the mesh gains connectivity.
+
+**Outcome:** Achieved 1st Runners Up at HackTropica 2K26 (MLH). Delivered a functional prototype including a React Native mobile app, FastAPI backend with Gemini 2.5 Flash for cloud-side triage, and a real-time Next.js dashboard for disaster response coordinators.
 
 ---
 
 ## Professional Experience
 
-### Freelance Backend Developer — Fluencer Market
+### Backend Developer Intern — Fluencer Market (Remote)
 
 - Period: Dec 2024 — Apr 2025
-- Description: Developed and maintained RESTful APIs to support influencer-brand collaborations using Flask.
-- Designed scalable backend services for managing influencer data and brand profiles
-- Built campaign workflow automation and performance analytics pipelines
-- Delivered production-grade APIs supporting real-time collaboration features
+- Designed and developed Flask REST APIs supporting influencer-brand collaboration workflows.
+- Reduced backend API latency by 35% through optimized database queries and response caching.
+- Delivered scalable backend services while collaborating with cross-functional engineering teams.
 
 ---
 
 ## Education
 
-### B.Tech in Computer Science and Engineering
+### B.Tech in Computer Science and Engineering (AI/ML)
 - Institution: JIS College of Engineering, West Bengal, India
-- Period: 2025 — 2028
+- Period: Jun 2025 — Present
+- SGPA: 7.9/10
+- Relevant Coursework: Data Structures & Algorithms, Operating Systems, Database Management Systems
+
+### Diploma in Computer Science and Technology
+- Institution: JIS School of Polytechnic, West Bengal, India
+- Period: 2022 — 2025
 
 ---
 
 ## Technical Skills
 
-### Backend
-Python, Node.js, Java, C++, Rust
+### LLMs & Agentic AI
+Multi-agent orchestration, Prompt Engineering, Retrieval-Augmented Generation (RAG), LLM fine-tuning concepts, Gemini, OpenAI GPT, Anthropic Claude
+
+### Backend & APIs
+Python (FastAPI, Flask), REST API design, Microservices, Server-Sent Events (SSE), Node.js, Java
+
+### Systems Programming
+C, DPDK, Multi-threading, QEMU/KVM, Rust
 
 ### Frontend
-JavaScript, React, Next.js, HTML, CSS, Tailwind CSS
-
-### Frameworks
-Flask, Django, Spring Boot
+JavaScript, TypeScript, React, Next.js, HTML, CSS, Tailwind CSS
 
 ### Database & Cloud
-MongoDB, PostgreSQL, MySQL, SQLite, GCP, AWS
+MongoDB, PostgreSQL, MySQL, SQLite, Supabase, GCP, Docker
 
 ### Tools & DevOps
-Git, Docker, Linux, Redis, Shell Scripting, Postman
+Git, Linux, Shell Scripting, Postman, pytest
 
 ---
 

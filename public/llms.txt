@@ -1,10 +1,10 @@
 # Piyush Paul
 
-> Full-Stack Developer & Backend Engineer
+> AI/ML Developer & Cybersecurity Engineer | Agentic AI · Autonomous Systems · Full-Stack
 
 ## About
 
-Piyush Paul is a Full-Stack Developer and Backend Engineer specializing in Python, Next.js, Flask, React, and cloud-native architectures. Building scalable systems, security tools, and modern web applications.
+Piyush Paul is an AI/ML Developer and Cybersecurity Engineer specializing in agentic AI systems, autonomous penetration testing pipelines, multi-agent orchestration, RAG, DPDK high-performance networking, and full-stack backend engineering. MLH Hack Days Winner 2026. Based in West Bengal, India.
 
 ## Links
 
@@ -18,24 +18,38 @@ Piyush Paul is a Full-Stack Developer and Backend Engineer specializing in Pytho
 
 - [AstroRoni](https://astroroni.com): Full-stack Vedic astrology platform with NASA ephemeris-based Kundli generation, 36 Guna matching, numerology, and NRI-friendly consultation booking.
 - [RiskRadar](https://riskradar.piyushpaul.com): Vulnerability detection and alerting software that tracks CVEs and notifies users when their products are affected.
+- [HTTP Header Security Analyzer](https://github.com/Piyush800x/header-analyzer): Production-ready Flask REST API that audits website HTTP security headers with A–F grading and severity-ranked remediation recommendations.
 - [Online Exam Panel](https://exam-panel.piyushpaul.com): Fully automated examination platform with admin controls, flexible exam creation, and instant result delivery.
 - [TimeZonesNow](https://timezone.piyushpaul.com): World clock and time zone converter — 2nd Place winner at Code Circuit Frontend Hackathon.
 
+## Hackathon Projects
+
+- [ARTA — Autonomous Red Team Agent](https://github.com/Piyush800x/arta): 🏆 MLH Hack Days Winner 2026. Autonomous penetration testing pipeline powered by Gemini 2.0 Flash — multi-agent system for target discovery, CVE analysis, and exploit validation.
+- [PacketForge](https://github.com/samiranpal2004/PacketForge-main): 🥈 Synchronicity S2 1st Runner-Up 2026. DPDK-based dual-NIC packet scrubber sustaining 470K packets/sec for DDoS mitigation.
+- [NeighbourNet](https://github.com/sudipta57/NeighbourNet2): 🥈 MLH HackTropica 1st Runner-Up 2026. Offline mesh SOS communication system using BLE/WiFi Direct for disaster scenarios.
+
+## Achievements
+
+- 🏆 MLH Hack Days Winner (2026) — ARTA, autonomous multi-agent penetration testing system
+- 🥈 Synchronicity S2, Jadavpur University (2026) — 1st Runner-Up for PacketForge, DPDK DDoS scrubber
+- 🥈 MLH HackTropica (2026) — 1st Runner-Up for NeighbourNet, offline mesh networking for disasters
+
 ## Skills
 
-- Backend: Python, Node.js, Java, C++, Rust
-- Frontend: JavaScript, React, Next.js, HTML, CSS, Tailwind CSS
-- Frameworks: Flask, Django, Spring Boot
-- Database & Cloud: MongoDB, PostgreSQL, MySQL, SQLite, GCP, AWS
-- Tools & DevOps: Git, Docker, Linux, Redis, Shell Scripting, Postman
+- LLMs & Agentic AI: Multi-agent orchestration, RAG, Prompt Engineering, Gemini, OpenAI GPT, Claude
+- Backend: Python, FastAPI, Flask, Node.js, C, C++, Rust, Java
+- Frontend: JavaScript, TypeScript, React, Next.js
+- Systems: DPDK, Multi-threading, QEMU/KVM
+- Database & Cloud: MongoDB, PostgreSQL, SQLite, Supabase, GCP
+- Tools & DevOps: Git, Docker, Linux, Shell Scripting
 
 ## Experience
 
-- Freelance Backend Developer at Fluencer Market (Dec 2024 — Apr 2025)
+- Backend Developer Intern at Fluencer Market (Dec 2024 — Apr 2025): Designed Flask REST APIs, reduced backend latency by 35% through query optimization and caching.
 
 ## Education
 
-- B.Tech in Computer Science and Engineering, JIS College of Engineering (2025 — 2028)
+- B.Tech in Computer Science (AI/ML), JIS College of Engineering, West Bengal (2025 — Present), SGPA: 7.9/10
 
 ## Optional
 

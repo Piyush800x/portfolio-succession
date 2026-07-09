@@ -1,44 +1,29 @@
-import { ImageResponse } from "next/og";
-import { projects } from "@/app/lib/data";
+import { ImageResponse } from "@vercel/og";
+import { NextRequest } from "next/server";
+import { projects, hackathonProjects } from "@/app/lib/data";
 
-export const alt = "Project — Piyush Paul";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+export const runtime = "edge";
 
-export function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
-}
+const allProjects = [...projects, ...hackathonProjects];
 
-export default async function Image({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const slug = searchParams.get("slug") ?? "";
+
+  const project = allProjects.find((p) => p.slug === slug);
 
   const title = project?.title ?? "Project";
   const tagline = project?.tagline ?? "";
   const category = project?.category ?? "";
   const stack = project?.stack ?? [];
 
-  const playfairFont = fetch(
-    new URL(
-      "https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf"
-    )
-  ).then((res) => res.arrayBuffer());
-
-  const interFont = fetch(
-    new URL(
-      "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf"
-    )
-  ).then((res) => res.arrayBuffer());
-
   const [playfairData, interData] = await Promise.all([
-    playfairFont,
-    interFont,
+    fetch(
+      "https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf"
+    ).then((r) => r.arrayBuffer()),
+    fetch(
+      "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf"
+    ).then((r) => r.arrayBuffer()),
   ]);
 
   return new ImageResponse(
@@ -89,16 +74,15 @@ export default async function Image({
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "12px",
           }}
         >
           <div
             style={{
               fontFamily: '"Inter"',
-              fontSize: "16px",
+              fontSize: "14px",
               fontWeight: 500,
               color: "#b49350",
-              letterSpacing: "3px",
+              letterSpacing: "4px",
               textTransform: "uppercase",
               display: "flex",
             }}
@@ -112,7 +96,7 @@ export default async function Image({
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "20px",
+            gap: "0px",
           }}
         >
           <div
@@ -136,6 +120,8 @@ export default async function Image({
               height: "3px",
               background: "linear-gradient(90deg, #9a7e42, #b49350, #9a7e42)",
               borderRadius: "2px",
+              marginTop: "20px",
+              marginBottom: "20px",
               display: "flex",
             }}
           />
@@ -164,7 +150,7 @@ export default async function Image({
           }}
         >
           {/* Tech stack pills */}
-          <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "10px" }}>
             {stack.slice(0, 5).map((tech) => (
               <div
                 key={tech}
@@ -189,10 +175,10 @@ export default async function Image({
           <div
             style={{
               fontFamily: '"Inter"',
-              fontSize: "18px",
+              fontSize: "16px",
               fontWeight: 300,
               color: "#9c9a94",
-              letterSpacing: "1px",
+              letterSpacing: "2px",
               display: "flex",
             }}
           >
@@ -202,7 +188,8 @@ export default async function Image({
       </div>
     ),
     {
-      ...size,
+      width: 1200,
+      height: 630,
       fonts: [
         {
           name: "Playfair Display",

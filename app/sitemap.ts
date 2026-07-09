@@ -1,15 +1,22 @@
 import type { MetadataRoute } from "next";
-import { projects } from "./lib/data";
+import { projects, hackathonProjects } from "./lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = "https://piyushpaul.com";
-  const lastModified = new Date("2026-02-27");
+  const lastModified = new Date("2026-07-09");
 
   const projectRoutes = projects.map((project) => ({
     url: `${siteUrl}/projects/${project.slug}`,
     lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.7,
+  }));
+
+  const hackathonRoutes = hackathonProjects.map((project) => ({
+    url: `${siteUrl}/projects/${project.slug}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
   }));
 
   return [
@@ -50,5 +57,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     ...projectRoutes,
+    ...hackathonRoutes,
   ];
 }
